@@ -10,8 +10,8 @@ export const COMPANY_INFO = {
   alternateName: "ComplexPrint",
   url: "https://complexprint.ru",
   email: "info@complexprint.ru",
-  telephone: "+74951031468",
-  telephoneFormatted: "+7 (495) 103-14-68",
+  telephone: "+79911857289",
+  telephoneFormatted: "+7 (991) 185-72-89",
   address: {
     streetAddress: "Абрамцевская 11 к1 стр3",
     addressLocality: "Москва",
@@ -95,7 +95,7 @@ export const getOrganizationSchema = () => ({
   // Социальные сети (можно добавить реальные ссылки)
   sameAs: [
     "https://vk.com/complexprint",
-    "https://t.me/complexprint"
+    "https://t.me/complexprint_mos"
   ],
   
   // Дата основания
@@ -237,12 +237,26 @@ export const getDiagnosticServiceSchema = () => ({
 export const getBreadcrumbSchema = (items) => ({
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
-  itemListElement: items.map((item, index) => ({
-    "@type": "ListItem",
-    position: index + 1,
-    name: item.name,
-    item: item.url ? `https://complexprint.ru${item.url}` : undefined
-  }))
+  itemListElement: items.map((item, index) => {
+    const isLast = index === items.length - 1;
+    const listItem = {
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name || item.label
+    };
+    
+    // Для всех элементов кроме последнего добавляем item с URL
+    // Для последнего элемента тоже добавляем item (Google требует)
+    const url = item.url || item.href;
+    if (url) {
+      listItem.item = `https://complexprint.ru${url}`;
+    } else if (isLast) {
+      // Для последнего элемента без URL используем текущую страницу
+      listItem.item = typeof window !== 'undefined' ? window.location.href : 'https://complexprint.ru';
+    }
+    
+    return listItem;
+  })
 });
 
 // FAQ Schema Generator
@@ -276,7 +290,7 @@ export const getHowToCallMasterSchema = () => ({
       "@type": "HowToStep",
       position: 1,
       name: "Свяжитесь с нами",
-      text: "Позвоните по телефону +7 (495) 103-14-68 или оставьте заявку на сайте через форму обратной связи",
+      text: "Позвоните по телефону +7 (991) 185-72-89 или оставьте заявку на сайте через форму обратной связи",
       url: "https://complexprint.ru/#repair-request"
     },
     {
@@ -456,3 +470,134 @@ export const getBrandServiceSchema = (brand) => {
     }
   };
 };
+
+
+// SiteNavigationElement Schema - разметка навигации сайта
+export const getSiteNavigationSchema = () => ({
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "@id": "https://complexprint.ru/#navigation",
+  name: "Главное меню сайта",
+  itemListElement: [
+    {
+      "@type": "SiteNavigationElement",
+      position: 1,
+      name: "Главная",
+      description: "Главная страница сервисного центра Комплекс Принт",
+      url: "https://complexprint.ru/"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      position: 2,
+      name: "Услуги",
+      description: "Услуги по ремонту принтеров и МФУ",
+      url: "https://complexprint.ru/#services"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      position: 3,
+      name: "Ремонт Xerox",
+      description: "Ремонт принтеров и МФУ Xerox в Москве",
+      url: "https://complexprint.ru/remont-printerov-xerox"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      position: 4,
+      name: "Ремонт HP",
+      description: "Ремонт принтеров и МФУ HP в Москве",
+      url: "https://complexprint.ru/remont-printerov-hp"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      position: 5,
+      name: "Ремонт Canon",
+      description: "Ремонт принтеров и МФУ Canon в Москве",
+      url: "https://complexprint.ru/remont-printerov-canon"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      position: 6,
+      name: "Ремонт Ricoh",
+      description: "Ремонт принтеров и МФУ Ricoh в Москве",
+      url: "https://complexprint.ru/remont-printerov-ricoh"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      position: 7,
+      name: "Ремонт Konica Minolta",
+      description: "Ремонт принтеров и МФУ Konica Minolta в Москве",
+      url: "https://complexprint.ru/remont-printerov-konica-minolta"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      position: 8,
+      name: "Ремонт Kyocera",
+      description: "Ремонт принтеров и МФУ Kyocera в Москве",
+      url: "https://complexprint.ru/remont-printerov-kyocera"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      position: 9,
+      name: "О нас",
+      description: "Информация о компании Комплекс Принт",
+      url: "https://complexprint.ru/about-us"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      position: 10,
+      name: "Отзывы",
+      description: "Отзывы клиентов о ремонте принтеров",
+      url: "https://complexprint.ru/reviews"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      position: 11,
+      name: "Цены",
+      description: "Прайс-лист на ремонт принтеров",
+      url: "https://complexprint.ru/ceny"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      position: 12,
+      name: "FAQ",
+      description: "Часто задаваемые вопросы о ремонте принтеров",
+      url: "https://complexprint.ru/faq"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      position: 13,
+      name: "Справочник дефектов печати",
+      description: "Справочник типичных дефектов печати и их решений",
+      url: "https://complexprint.ru/print-defects-guide"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      position: 14,
+      name: "Контакты",
+      description: "Контактная информация сервисного центра",
+      url: "https://complexprint.ru/contacts"
+    }
+  ]
+});
+
+// WPHeader Schema - разметка шапки сайта
+export const getWPHeaderSchema = () => ({
+  "@context": "https://schema.org",
+  "@type": "WPHeader",
+  "@id": "https://complexprint.ru/#header",
+  url: "https://complexprint.ru/",
+  headline: "Комплекс Принт — ремонт принтеров в Москве",
+  description: "Профессиональный ремонт и обслуживание лазерных принтеров HP, Canon, Kyocera, Ricoh, Xerox, Konica Minolta"
+});
+
+// WPFooter Schema - разметка подвала сайта  
+export const getWPFooterSchema = () => ({
+  "@context": "https://schema.org",
+  "@type": "WPFooter",
+  "@id": "https://complexprint.ru/#footer",
+  url: "https://complexprint.ru/",
+  copyrightYear: "2025",
+  copyrightHolder: {
+    "@id": "https://complexprint.ru/#organization"
+  }
+});
