@@ -11,33 +11,28 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-pink-50 via-purple-50 to-white">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-pink-50 via-purple-50 to-white pt-24 sm:pt-28 lg:pt-28 xl:pt-32 pb-12 lg:pb-16">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-pink-400/20 to-purple-600/20 rounded-full blur-3xl"></div>
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-purple-400/20 to-pink-600/20 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="container mx-auto px-4 pt-20 lg:pt-0 relative z-10">
+      <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-8">
             <div className="space-y-4">
-              <div className="inline-flex items-center space-x-2 bg-white/80 backdrop-blur-sm rounded-full px-4 py-2 border border-pink-200">
-                <Award className="w-4 h-4 text-pink-500" />
-                <span className="text-sm font-medium text-gray-700">Нам доверяют крупные компании</span>
-              </div>
-              
               <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                Профессиональное
+                Ремонт принтеров
                 <span className="bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent block">
-                  обслуживание печатного
+                  с выездом в Москве
                 </span>
-                оборудования
+                Обслуживание для офиса
               </h1>
               
-              <p className="text-xl text-gray-600 leading-relaxed max-w-lg">
-                Экономьте на расходах по обслуживанию и продлевайте срок службы вашего печатного оборудования с помощью наших комплексных абонентских услуг и экспертного ремонта.
+              <p className="text-lg text-gray-600 leading-relaxed max-w-lg">
+                Ремонт принтеров с выездом в Москве • Выезд мастера в течение 1–4 часов • Диагностика бесплатно при ремонте • Ремонт на месте в 80–90% случаев • Гарантия от 3 до 12 месяцев • Оригинальные запчасти HP, Canon, Ricoh, Kyocera • <strong className="text-pink-600">Цены от 3000 ₽</strong> за выезд + ремонт.
               </p>
             </div>
 

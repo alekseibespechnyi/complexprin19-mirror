@@ -192,6 +192,13 @@ const Header = () => {
                   >
                     Справочник дефектов
                   </DropdownMenuItem>
+                  {/* НОВЫЙ ПУНКТ */}
+                  <DropdownMenuItem 
+                    onClick={() => goToPage('/printer-error-guide')}
+                    className="cursor-pointer font-montserrat font-semibold text-purple-900 hover:bg-pink-50 hover:text-pink-600"
+                  >
+                    Гид по Ошибкам
+                  </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
               
@@ -253,6 +260,8 @@ const Header = () => {
               <button onClick={() => goToPage('/ceny')} className="px-6 py-3 text-left font-montserrat font-bold text-purple-900 hover:bg-pink-50 hover:text-pink-600 transition-colors duration-200">Цены</button>
               <button onClick={() => goToPage('/faq')} className="px-6 py-3 text-left font-montserrat font-bold text-purple-900 hover:bg-pink-50 hover:text-pink-600 transition-colors duration-200">FAQ</button>
               <button onClick={() => goToPage('/print-defects-guide')} className="px-6 py-3 text-left font-montserrat font-bold text-purple-900 hover:bg-pink-50 hover:text-pink-600 transition-colors duration-200">Справочник дефектов</button>
+              {/* НОВЫЙ ПУНКТ В МОБИЛЬНОМ МЕНЮ */}
+              <button onClick={() => goToPage('/printer-error-guide')} className="px-6 py-3 text-left font-montserrat font-bold text-purple-900 hover:bg-pink-50 hover:text-pink-600 transition-colors duration-200">Гид по Ошибкам</button>
               
               <button onClick={() => goToPage('/contacts')} className="px-4 py-3 text-left font-montserrat font-bold text-purple-900 hover:bg-pink-50 hover:text-pink-600 transition-colors duration-200">Контакты</button>
               <div className="px-4 py-3 border-t">

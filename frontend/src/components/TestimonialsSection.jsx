@@ -9,7 +9,7 @@ const testimonials = [
     id: 1,
     company: 'Азиатско-Тихоокеанский Банк',
     type: 'Банковский сектор',
-    image: '/images/WhatsApp полная переписка Азиатско-Тихоокеанский Банк.png',
+    image: '/images/WhatsApp полная переписка Азиатско-Тихоокеанский Банк.jpg',
     description: 'Благодарность за оперативный ремонт принтеров',
     rating: 5
   },
@@ -17,7 +17,7 @@ const testimonials = [
     id: 2,
     company: 'Криогенмаш',
     type: 'Промышленность',
-    image: '/images/WhatsApp полная переписка Криогенмаш.png',
+    image: '/images/WhatsApp полная переписка Криогенмаш.jpg',
     description: 'Полная переписка - техническая поддержка оборудования',
     rating: 5
   },
@@ -25,7 +25,7 @@ const testimonials = [
     id: 3,
     company: 'Криогенмаш',
     type: 'Промышленность',
-    image: '/images/Скриншот Криогенмаш.png',
+    image: '/images/Скриншот Криогенмаш.jpg',
     description: 'Благодарственный отзыв за обслуживание',
     rating: 5
   },
@@ -33,7 +33,7 @@ const testimonials = [
     id: 4,
     company: 'Альпинтех',
     type: 'Строительство',
-    image: '/images/Скриншот Альпинтех.png',
+    image: '/images/Скриншот Альпинтех.jpg',
     description: 'Отзыв о качественном ремонте',
     rating: 5
   },
@@ -41,7 +41,7 @@ const testimonials = [
     id: 5,
     company: 'Коттон-Клаб',
     type: 'Торговля',
-    image: '/images/Скриншот Коттон-Клаб.png',
+    image: '/images/Скриншот Коттон-Клаб.jpg',
     description: 'Благодарность за быстрое обслуживание',
     rating: 5
   },
@@ -49,7 +49,7 @@ const testimonials = [
     id: 6,
     company: 'Соколов',
     type: 'Ювелирная сеть',
-    image: '/images/Скриншот Соколов.png',
+    image: '/images/Скриншот Соколов.jpg',
     description: 'Положительный отзыв о сервисе',
     rating: 5
   }

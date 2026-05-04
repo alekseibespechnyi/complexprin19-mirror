@@ -146,7 +146,7 @@ const PrinterList = ({ printers, categoryName }) => {
               Наши специалисты помогут выбрать оптимальное решение для ваших задач
             </p>
             <a
-              href="tel:+74951234567"
+              href="tel:+79911857289"
               className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold rounded-lg hover:from-pink-600 hover:to-purple-700 transform hover:-translate-y-1 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               📞 Связаться с нами

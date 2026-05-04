@@ -118,7 +118,7 @@ const RepairRequestForm = () => {
       }
     } catch (error) {
       console.error('❌ Ошибка при отправке заявки на ремонт:', error);
-      setError(error.message || 'Произошла ошибка при отправке заявки. Пожалуйста, попробуйте еще раз или свяжитесь с нами по телефону +74951031468.');
+      setError(error.message || 'Произошла ошибка при отправке заявки. Пожалуйста, попробуйте еще раз или свяжитесь с нами по телефону +79911857289.');
     } finally {
       setIsSubmitting(false);
     }
@@ -211,14 +211,14 @@ const RepairRequestForm = () => {
                   <Phone className="w-5 h-5 text-pink-500" />
                   <div>
                     <p className="font-semibold text-gray-900">Телефон</p>
-                    <p className="text-gray-600">+74951031468</p>
+                    <p className="text-gray-600">+79911857289</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Mail className="w-5 h-5 text-pink-500" />
                   <div>
                     <p className="font-semibold text-gray-900">Email</p>
-                    <p className="text-gray-600">9104297686@outlook.com</p>
+                    <p className="text-gray-600">info@complexprint.ru</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-3">

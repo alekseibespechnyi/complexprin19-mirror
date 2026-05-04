@@ -30,14 +30,47 @@ const EquipmentSection = () => {
             Оборудование, которое мы обслуживаем
           </Badge>
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Профессиональное обслуживание
+            Ремонт принтеров любых брендов
             <span className="bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent block lg:inline lg:ml-4">
-              всех ведущих брендов
+              с гарантией качества
             </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8">
-            Мы специализируемся на обслуживании лазерных принтеров и плоттеров от всех основных производителей. Наши опытные техники имеют сертификаты для работы с оборудованием ведущих брендов.
+          <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed mb-6">
+            Мы чиним любые бренды: ремонт принтеров HP, Canon, Kyocera, Brother, Ricoh и других. Наши инженеры имеют сертификаты и опыт работы в авторизованных сервисных центрах, поэтому гарантируют качественный ремонт.
           </p>
+          
+          {/* Срочный ремонт - частые поломки */}
+          <div className="bg-gradient-to-r from-pink-50 to-purple-50 rounded-2xl p-6 mb-8 max-w-4xl mx-auto">
+            <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">
+              🔧 Срочный ремонт самых частых поломок
+            </h3>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-gray-700">
+              <div className="flex items-start gap-2">
+                <span className="text-pink-500">•</span>
+                <span>Не включается / не видит картридж</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="text-pink-500">•</span>
+                <span>Полосы, пятна, бледная печать</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="text-pink-500">•</span>
+                <span>Замятие бумаги, проблемы с подачей</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="text-pink-500">•</span>
+                <span>Ошибки термоузла / печки</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="text-pink-500">•</span>
+                <span>Не работает дуплекс, сканер</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="text-pink-500">•</span>
+                <span>Проблемы с проявкой, лазером</span>
+              </div>
+            </div>
+          </div>
           
           {/* Кнопка выбора принтера */}
           <div className="text-center">
