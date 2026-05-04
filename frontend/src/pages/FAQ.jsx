@@ -74,7 +74,7 @@ const FAQ = () => {
         },
         {
           question: "Принтер выдает ошибку - что делать?",
-          answer: "При появлении ошибки на дисплее принтера: запишите код ошибки и модель принтера, позвоните нам по телефону +7 (495) 103-14-68, опишите ситуацию специалисту. В большинстве случаев мы сможем провести первичную диагностику по телефону и подсказать простое решение. Если потребуется выезд мастера — согласуем удобное время."
+          answer: "При появлении ошибки на дисплее принтера: запишите код ошибки и модель принтера, позвоните нам по телефону +7 (991) 185-72-89, опишите ситуацию специалисту. В большинстве случаев мы сможем провести первичную диагностику по телефону и подсказать простое решение. Если потребуется выезд мастера — согласуем удобное время."
         },
         {
           question: "Можно ли отремонтировать принтер на месте?",
@@ -123,7 +123,7 @@ const FAQ = () => {
       <Header />
 
       <main className="container mx-auto px-4 pt-24 pb-16 max-w-5xl">
-        <Breadcrumbs items={[{ name: 'Часто задаваемые вопросы' }]} />
+        <Breadcrumbs items={[{ name: 'Часто задаваемые вопросы', url: '/faq' }]} />
 
         {/* Hero Section */}
         <header className="text-center mb-12">
@@ -146,7 +146,7 @@ const FAQ = () => {
               <span className="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold mr-4">1</span>
               <div>
                 <h3 className="font-semibold text-gray-900 mb-1">Свяжитесь с нами</h3>
-                <p className="text-gray-700">Позвоните по телефону <a href="tel:+74951031468" className="text-blue-600 hover:underline font-semibold">+7 (495) 103-14-68</a> или оставьте заявку на сайте через форму обратной связи</p>
+                <p className="text-gray-700">Позвоните по телефону <a href="tel:+79911857289" className="text-blue-600 hover:underline font-semibold">+7 (991) 185-72-89</a> или оставьте заявку на сайте через форму обратной связи</p>
               </div>
             </li>
             <li className="flex">
@@ -229,11 +229,11 @@ const FAQ = () => {
           <p className="text-lg mb-6 opacity-95">Свяжитесь с нами, и мы поможем решить вашу проблему</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a 
-              href="tel:+74951031468"
+              href="tel:+79911857289"
               className="inline-flex items-center bg-white text-pink-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-200"
             >
               <Phone className="w-5 h-5 mr-2" />
-              +7 (495) 103-14-68
+              +7 (991) 185-72-89
             </a>
             <a 
               href="mailto:info@complexprint.ru"

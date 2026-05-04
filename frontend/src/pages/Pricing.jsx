@@ -30,7 +30,7 @@ export default function Pricing() {
       <Header />
 
       <main className="container mx-auto px-4 pt-24 pb-16 max-w-6xl">
-        <Breadcrumbs items={[{ name: 'Цены' }]} />
+        <Breadcrumbs items={[{ name: 'Цены', url: '/ceny' }]} />
         <header className="text-center mb-12">
           <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Цены на ремонт принтеров</h1>
           <p className="text-gray-600 text-lg">Прозрачные тарифы: диагностика, разовый ремонт и абонентское обслуживание</p>

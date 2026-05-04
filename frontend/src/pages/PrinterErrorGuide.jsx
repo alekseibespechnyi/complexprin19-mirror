@@ -401,10 +401,10 @@ const PrinterErrorGuide = () => {
                     Оставить заявку на ремонт
                   </button>
                   <a
-                    href="tel:+74951031468"
+                    href="tel:+79911857289"
                     className="bg-white/20 text-white px-8 py-3 rounded-full font-semibold hover:bg-white/30 transition-all duration-300"
                   >
-                    Позвонить: +7 495 103-14-68
+                    Позвонить: +7 991 185 72 89
                   </a>
                 </div>
               </div>

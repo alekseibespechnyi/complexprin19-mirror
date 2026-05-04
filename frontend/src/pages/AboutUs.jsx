@@ -18,7 +18,7 @@ export default function AboutUs() {
     publisher: {
       "@type": "LocalBusiness",
       name: "Комплекс Принт",
-      telephone: "+7-495-103-14-68",
+      telephone: "+7-991-185-72-89",
       address: {
         "@type": "PostalAddress",
         addressLocality: "Москва",
@@ -202,11 +202,11 @@ export default function AboutUs() {
                 Оставить заявку
               </button>
               <a 
-                href="tel:+74951031468"
+                href="tel:+79911857289"
                 className="flex items-center space-x-2 bg-white text-gray-900 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
               >
                 <Phone className="w-5 h-5" />
-                <span>+7 495 103-14-68</span>
+                <span>+7 991 185 72 89</span>
               </a>
             </div>
           </section>
