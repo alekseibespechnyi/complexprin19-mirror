@@ -1,12 +1,11 @@
 // Mock data for Print Complex website - Russian version
 
-// Mock data for Print Complex website - Russian version
-
 export const companyInfo = {
   name: "Комплекс Принт",
-  phone: "+74951031468",
-  email: "9104297686@outlook.com",
+  phone: "+79911857289",
+  email: "info@complexprint.ru",
   address: "г. Москва, Абрамцевская 11 к1 стр3",
+  telegram: "https://t.me/complexprint_mos",
   description: "Экономьте на обслуживании печатного оборудования и продлевайте срок его службы с помощью наших профессиональных услуг."
 };
 
