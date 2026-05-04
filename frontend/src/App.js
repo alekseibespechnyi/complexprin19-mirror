@@ -8,7 +8,6 @@ import EquipmentSection from "./components/EquipmentSection";
 import AboutSection from "./components/AboutSection";
 import RepairRequestForm from "./components/RepairRequestForm";
 import Footer from "./components/Footer";
-import TestimonialsSection from "./components/TestimonialsSection";
 import UserAgreement from "./pages/UserAgreement";
 import PrinterSelection from "./pages/PrinterSelection";
 import PrinterErrorGuide from "./pages/PrinterErrorGuide";
@@ -28,12 +27,18 @@ import AboutUs from "./pages/AboutUs";
 import ScrollToTop from "./components/ScrollToTop";
 import FAQ from "./pages/FAQ";
 import CookieConsent from "./components/CookieConsent";
+import Contacts from "./pages/Contacts";
+import Reviews from "./pages/Reviews";
+import NotFound from "./pages/NotFound";
 import { 
   getOrganizationSchema, 
   getWebSiteSchema,
   getSubscriptionServiceSchema,
   getRepairServiceSchema,
-  getDiagnosticServiceSchema
+  getDiagnosticServiceSchema,
+  getSiteNavigationSchema,
+  getWPHeaderSchema,
+  getWPFooterSchema
 } from "./utils/schemas";
 
 const Home = () => {
@@ -43,35 +48,9 @@ const Home = () => {
   const subscriptionServiceSchema = getSubscriptionServiceSchema();
   const repairServiceSchema = getRepairServiceSchema();
   const diagnosticServiceSchema = getDiagnosticServiceSchema();
-
-  // Старая разметка для обратной совместимости (можно удалить, если используется новая)
-  const localBusinessJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    name: "Комплекс Принт",
-    alternateName: "ComplexPrint",
-    url: "https://complexprint.ru/",
-    telephone: "+7-495-103-14-68",
-    email: "9104297686@outlook.com",
-    address: {
-      "@type": "PostalAddress",
-      addressCountry: "RU",
-      addressLocality: "Москва",
-      streetAddress: "Абрамцевская 11 к1 стр3",
-    },
-    areaServed: ["Москва", "Московская область"],
-    openingHoursSpecification: [
-      {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        opens: "09:00",
-        closes: "18:00",
-      },
-    ],
-    priceRange: "₽₽",
-    description:
-      "Профессиональный ремонт и обслуживание лазерных принтеров и МФУ в Москве и МО. Выезд мастера, оригинальные запчасти, гарантия 6 месяцев.",
-  };
+  const siteNavigationSchema = getSiteNavigationSchema();
+  const wpHeaderSchema = getWPHeaderSchema();
+  const wpFooterSchema = getWPFooterSchema();
 
   return (
     <div className="min-h-screen">
@@ -89,6 +68,9 @@ const Home = () => {
         <script type="application/ld+json">{JSON.stringify(subscriptionServiceSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(repairServiceSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(diagnosticServiceSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(siteNavigationSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(wpHeaderSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(wpFooterSchema)}</script>
       </Helmet>
       <Header />
       <main>
@@ -96,7 +78,6 @@ const Home = () => {
         <ServicesSection />
         <EquipmentSection />
         <AboutSection />
-        <TestimonialsSection />
         <RepairRequestForm />
       </main>
       <Footer />
@@ -126,6 +107,10 @@ function App() {
           <Route path="/rayony-moskvy" element={<Districts />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/faq" element={<FAQ />} />
+          <Route path="/contacts" element={<Contacts />} />
+          <Route path="/reviews" element={<Reviews />} />
+          {/* 404 - должен быть последним */}
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
       <Toaster />
