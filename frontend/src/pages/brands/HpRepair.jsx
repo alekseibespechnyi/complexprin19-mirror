@@ -39,7 +39,7 @@ export default function HpRepair() {
           
           <Breadcrumbs items={[
             { name: 'Услуги', url: '/#services' },
-            { name: 'Ремонт принтеров HP' }
+            { name: 'Ремонт принтеров HP', url: '/remont-printerov-hp' }
           ]} />
           
           {/* Hero Image */}
@@ -88,8 +88,8 @@ export default function HpRepair() {
               <button onClick={goRepairForm} className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-200">
                 Заказать ремонт
               </button>
-              <a href="tel:+74951031468" className="bg-white/20 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/30 transition-colors duration-200 text-center">
-                +7 495 103-14-68
+              <a href="tel:+79911857289" className="bg-white/20 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/30 transition-colors duration-200 text-center">
+                +7 991 185-72-89
               </a>
             </div>
           </section>
